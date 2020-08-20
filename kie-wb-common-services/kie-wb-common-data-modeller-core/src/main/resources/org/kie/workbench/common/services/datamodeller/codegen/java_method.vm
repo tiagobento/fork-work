@@ -1,0 +1,6 @@
+#if ($nameTool.hasMethodAnnotations($attr))
+    $engine.generateAllAnnotationsString($context, $attr)
+#end
+$nameTool.resolveVisibility($attr) $nameTool.buildMethodReturnTypeString($attr.returnType) $attr.getName()($nameTool.buildMethodParameterString($attr.getParameters())) {
+    $attr.getBody()
+}
